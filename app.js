@@ -1,6 +1,6 @@
 const express = require('express');
 const axios = require('axios');
-require('dotenv').config(); // Load environment variables
+require('dotenv').config(); 
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -23,7 +23,7 @@ async function getWeatherData(cities) {
         throw new Error('Invalid input. "cities" should be an array.');
     }
 
-    const apiKey = process.env.OPENWEATHERMAP_API_KEY; // Use environment variable for API key
+    const apiKey = process.env.OPENWEATHERMAP_API_KEY; 
 
     const weatherDataPromises = cities.map(async city => {
         try {

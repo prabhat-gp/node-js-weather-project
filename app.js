@@ -19,10 +19,6 @@ app.post('/getWeather', async (req, res) => {
 });
 
 async function getWeatherData(cities) {
-    if (!cities || !Array.isArray(cities)) {
-        throw new Error('Invalid input. "cities" should be an array.');
-    }
-
     const apiKey = process.env.OPENWEATHERMAP_API_KEY; 
 
     const weatherDataPromises = cities.map(async city => {
